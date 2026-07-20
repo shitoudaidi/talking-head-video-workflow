@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "intent": ["practical", "field-tested", "judgment-heavy", "clean-not-cold"],
+  "palette": {
+    "background": "#020611",
+    "surface": "rgba(3,10,24,0.86)",
+    "ink": "#F8FBFF",
+    "muted": "rgba(248,251,255,0.68)",
+    "blue": "#19A8FF",
+    "cyan": "#62D8FF",
+    "orange": "#FF9B22",
+    "danger": "#FF4E3A",
+    "line": "rgba(248,251,255,0.16)"
+  },
+  "typography1080p": {
+    "thesis": {"min": 68, "preferred": 82, "max": 92, "lineHeight": 1.04, "weight": 1000},
+    "cardTitle": {"min": 38, "preferred": 44, "max": 52, "lineHeight": 1.08, "weight": 950},
+    "keyword": {"min": 30, "preferred": 36, "max": 42, "lineHeight": 1.08, "weight": 900},
+    "metadata": {"min": 14, "preferred": 18, "max": 22, "lineHeight": 1.2, "weight": 850},
+    "subtitleChinese": {"min": 34, "preferred": 38, "max": 42, "lineHeight": 1.16, "weight": 900},
+    "subtitleTranslation": {"min": 16, "preferred": 19, "max": 22, "lineHeight": 1.18, "weight": 700}
+  },
+  "shape": {"cardRadius": 8, "proofRadius": 8, "pillRadius": 999, "borderWidth": 1, "accentRail": 6},
+  "shadow": {
+    "card": "0 20px 44px rgba(0,0,0,0.28)",
+    "proof": "0 20px 42px rgba(0,0,0,0.38)",
+    "text": "0 4px 18px rgba(0,0,0,0.64)"
+  },
+  "motion30fps": {
+    "entryFrames": [6, 12],
+    "exitFrames": [6, 10],
+    "rowStaggerFrames": [5, 8],
+    "spring": {"damping": 18, "stiffness": 160, "mass": 0.8},
+    "gentleSpring": {"damping": 22, "stiffness": 140, "mass": 0.9},
+    "translationPixels": [18, 38],
+    "scaleFrom": [0.97, 0.99]
+  },
+  "density60to90s": {
+    "minimumCleanATrackShare": 0.55,
+    "preferredEmphasisShare": [0.25, 0.35],
+    "bigEmphasisCount": [6, 9],
+    "fullScreenCardCount": [3, 5],
+    "denseListMaximum": 3
+  },
+  "safeMargins": {"outerPercent": 5, "subtitleBottomPercent": [5, 16], "platformUiReservePercent": 8}
+}

@@ -1,8 +1,14 @@
 {
-  "version": 1,
+  "version": 2,
   "source": "inputs/talking-head.mp4",
   "duration": 24.0,
   "ratio": "9:16",
+  "direction": {
+    "character": ["practical", "field-tested", "clean-not-cold"],
+    "primary_grammar": "speaker-led with short semantic cards",
+    "a_track_target": 0.65,
+    "anti_goals": ["template demo", "constant b-roll", "face overlap"]
+  },
   "beats": [
     {
       "start": 0.0,
@@ -10,41 +16,93 @@
       "spoken": "State the opening conflict.",
       "function": "hook",
       "track": "A",
-      "visual_mode": "keyword-emphasis",
+      "card_type": "thesis",
       "zone": "top-left",
-      "primary_visual": "speaker",
-      "subtitle": true,
+      "primary_visual": "speaker-plus-thesis",
+      "text_nodes": [
+        {"role": "thesis", "text": "先别急着下结论"},
+        {"role": "metadata", "text": "REAL TEST"}
+      ],
+      "subtitle": false,
+      "motion": {"entry": "mask-slide", "entry_frames": 8, "hold": "static", "exit": "fade-slide", "exit_frames": 8},
       "proof_type": "none",
       "asset": null,
-      "risk": "Keep text outside face and subtitle zones."
+      "risks": ["face"],
+      "why": "The opening needs one unresolved judgment visible within the first second."
     },
     {
-      "start": 5.1,
+      "start": 2.4,
       "end": 7.0,
+      "spoken": "Let the speaker establish trust and context.",
+      "function": "trust",
+      "track": "A",
+      "card_type": "none",
+      "zone": "none",
+      "primary_visual": "speaker",
+      "text_nodes": [],
+      "subtitle": true,
+      "motion": {"entry": "none", "entry_frames": 0, "hold": "clean-a-track", "exit": "none", "exit_frames": 0},
+      "proof_type": "none",
+      "asset": null,
+      "risks": ["subtitle"],
+      "why": "Expression and personal context carry more trust than another graphic."
+    },
+    {
+      "start": 7.0,
+      "end": 9.0,
       "spoken": "Show the verified result.",
       "function": "proof",
       "track": "B",
-      "visual_mode": "proof-frame",
+      "card_type": "proof",
       "zone": "full-screen",
       "primary_visual": "verified-screen-recording",
+      "text_nodes": [
+        {"role": "metadata", "text": "REAL RESULT"},
+        {"role": "keyword", "text": "看这里"}
+      ],
       "subtitle": true,
+      "motion": {"entry": "spring-slide", "entry_frames": 8, "hold": "slow-drift", "exit": "fade", "exit_frames": 8},
       "proof_type": "proof",
       "asset": "assets/verified-result.mp4",
-      "risk": "Do not crop out the identifying result or source context."
+      "risks": ["subtitle", "proof-crop"],
+      "why": "The real recording establishes that the reported result actually occurred."
     },
     {
-      "start": 21.2,
+      "start": 9.0,
+      "end": 20.0,
+      "spoken": "Explain what the result means.",
+      "function": "explanation",
+      "track": "A",
+      "card_type": "none",
+      "zone": "none",
+      "primary_visual": "speaker",
+      "text_nodes": [],
+      "subtitle": true,
+      "motion": {"entry": "none", "entry_frames": 0, "hold": "clean-a-track", "exit": "none", "exit_frames": 0},
+      "proof_type": "none",
+      "asset": null,
+      "risks": ["subtitle", "hand"],
+      "why": "The reasoning is easier to follow without continuous reorientation."
+    },
+    {
+      "start": 20.0,
       "end": 24.0,
       "spoken": "End with one clear recommendation.",
       "function": "conclusion",
       "track": "full-screen-card",
-      "visual_mode": "verdict",
+      "card_type": "verdict",
       "zone": "full-screen",
       "primary_visual": "verdict-card",
+      "text_nodes": [
+        {"role": "metadata", "text": "FINAL CALL"},
+        {"role": "thesis", "text": "先验证，再交付"}
+      ],
       "subtitle": false,
+      "motion": {"entry": "spring-rise", "entry_frames": 10, "hold": "static", "exit": "fade", "exit_frames": 8},
       "proof_type": "none",
       "asset": null,
-      "risk": "Keep the recommendation readable in one glance."
+      "risks": ["read-time"],
+      "why": "The recommendation needs a clean screenshot-worthy ending."
     }
   ]
 }

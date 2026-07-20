@@ -1,4 +1,4 @@
 interface:
   display_name: "Talking-Head Video Workflow"
-  short_description: "Turn raw spoken footage into a reviewed knowledge video"
-  default_prompt: "Use $talking-head-video-workflow to turn my spoken footage into a complete, frame-reviewed knowledge video."
+  short_description: "Design and produce an art-directed talking-head video"
+  default_prompt: "Use $talking-head-video-workflow to art-direct, animate, render, and aesthetically review my spoken footage as a complete knowledge video."

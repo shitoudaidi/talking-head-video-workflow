@@ -34,18 +34,41 @@ Source: `{args.source}`
 Aspect ratio: `{args.ratio}`
 """
     visual = {
-        "version": 1,
+        "version": 2,
         "source": args.source,
         "duration": 0,
         "ratio": args.ratio,
+        "direction": {
+            "character": [],
+            "primary_grammar": "",
+            "a_track_target": 0.65,
+            "anti_goals": [],
+        },
         "beats": [],
     }
     manifest = {"version": 1, "assets": []}
+    layout = {"version": 1, "samples": [], "zones": []}
+    typography = {
+        "version": 1,
+        "font_family": "",
+        "thesis": {},
+        "card_title": {},
+        "keyword": {},
+        "metadata": {},
+        "subtitle_chinese": {},
+        "subtitle_translation": {},
+        "longest_strings_tested": [],
+    }
+    aesthetic = {"version": 1, "frames": [], "minimum_average": 1.7, "zero_scores_allowed": 0}
 
     write_new(root / "brief.md", brief)
     write_new(root / "transcript.json", json.dumps({"version": 1, "cues": []}, indent=2) + "\n")
+    write_new(root / "layout-survey.json", json.dumps(layout, indent=2) + "\n")
+    write_new(root / "typography-plan.json", json.dumps(typography, indent=2) + "\n")
     write_new(root / "visual-script.json", json.dumps(visual, indent=2) + "\n")
     write_new(root / "asset-manifest.json", json.dumps(manifest, indent=2) + "\n")
+    write_new(root / "card-map.md", "# Card Map\n\n| Time | Sentence function | Card | Text nodes | Zone | Motion | Risk |\n| --- | --- | --- | --- | --- | --- | --- |\n")
+    write_new(root / "aesthetic-review.json", json.dumps(aesthetic, indent=2) + "\n")
     write_new(root / "review.md", "# Review\n\n## Observed\n\n## Fixed\n\n## Remaining Uncertainty\n")
     write_new(root / "publish-package.md", "# Publish Package\n\nTitle:\nCover line:\nDescription:\nHashtags:\nCore takeaway:\nPinned comment:\n")
     write_new(root / "postmortem.md", "# Postmortem\n\nWhat worked:\nWhat failed:\nFriction:\nReusable improvement:\n")
